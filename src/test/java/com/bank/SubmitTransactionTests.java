@@ -49,6 +49,9 @@ public class SubmitTransactionTests extends BaseTests {
         assertEquals(fromAccountBalance.subtract(amount), balance);
         balance = new BigDecimal(defaultApi.getAccountById(toAccount.getId()).getBalance());
         assertEquals(amount, balance);
+
+        var got = defaultApi.getTransactionById(transaction.getId());
+        assertEquals(result, got);
     }
 
     @Test

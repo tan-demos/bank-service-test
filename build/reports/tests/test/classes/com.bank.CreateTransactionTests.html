@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">6</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">6.858s</div>
+<div class="counter">36.091s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,10 +61,130 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="createTransaction_HappyCase()"></a>
+<h3 class="failures">createTransaction_HappyCase()</h3>
+<span class="code">
+<pre>com.bank.api.ApiException: Message: 
+HTTP response code: 500
+HTTP response body: {&quot;timestamp&quot;:&quot;2025-03-09T08:31:39.810+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/accounts&quot;}
+HTTP response headers: {connection=[close], content-type=[application/json], date=[Sun, 09 Mar 2025 08:31:39 GMT], transfer-encoding=[chunked]}
+	at app//com.bank.api.ApiClient.handleResponse(ApiClient.java:1154)
+	at app//com.bank.api.ApiClient.execute(ApiClient.java:1067)
+	at app//com.bank.api.client.DefaultApi.addAccountWithHttpInfo(DefaultApi.java:184)
+	at app//com.bank.api.client.DefaultApi.addAccount(DefaultApi.java:163)
+	at app//com.bank.CreateTransactionTests.setUp(CreateTransactionTests.java:24)
+	at java.base@21.0.5/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base@21.0.5/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base@21.0.5/java.util.ArrayList.forEach(ArrayList.java:1596)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="createTransaction_InSufficientBalance()"></a>
+<h3 class="failures">createTransaction_InSufficientBalance()</h3>
+<span class="code">
+<pre>com.bank.api.ApiException: Message: 
+HTTP response code: 500
+HTTP response body: {&quot;timestamp&quot;:&quot;2025-03-09T08:31:33.795+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/accounts&quot;}
+HTTP response headers: {connection=[close], content-type=[application/json], date=[Sun, 09 Mar 2025 08:31:33 GMT], transfer-encoding=[chunked]}
+	at app//com.bank.api.ApiClient.handleResponse(ApiClient.java:1154)
+	at app//com.bank.api.ApiClient.execute(ApiClient.java:1067)
+	at app//com.bank.api.client.DefaultApi.addAccountWithHttpInfo(DefaultApi.java:184)
+	at app//com.bank.api.client.DefaultApi.addAccount(DefaultApi.java:163)
+	at app//com.bank.CreateTransactionTests.setUp(CreateTransactionTests.java:24)
+	at java.base@21.0.5/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base@21.0.5/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base@21.0.5/java.util.ArrayList.forEach(ArrayList.java:1596)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="createTransaction_InvalidFromAccountId()"></a>
+<h3 class="failures">createTransaction_InvalidFromAccountId()</h3>
+<span class="code">
+<pre>com.bank.api.ApiException: Message: 
+HTTP response code: 500
+HTTP response body: {&quot;timestamp&quot;:&quot;2025-03-09T08:32:03.868+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/accounts&quot;}
+HTTP response headers: {connection=[close], content-type=[application/json], date=[Sun, 09 Mar 2025 08:32:03 GMT], transfer-encoding=[chunked]}
+	at app//com.bank.api.ApiClient.handleResponse(ApiClient.java:1154)
+	at app//com.bank.api.ApiClient.execute(ApiClient.java:1067)
+	at app//com.bank.api.client.DefaultApi.addAccountWithHttpInfo(DefaultApi.java:184)
+	at app//com.bank.api.client.DefaultApi.addAccount(DefaultApi.java:163)
+	at app//com.bank.CreateTransactionTests.setUp(CreateTransactionTests.java:24)
+	at java.base@21.0.5/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base@21.0.5/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base@21.0.5/java.util.ArrayList.forEach(ArrayList.java:1596)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="createTransaction_InvalidToAccountId()"></a>
+<h3 class="failures">createTransaction_InvalidToAccountId()</h3>
+<span class="code">
+<pre>com.bank.api.ApiException: Message: 
+HTTP response code: 500
+HTTP response body: {&quot;timestamp&quot;:&quot;2025-03-09T08:31:57.856+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/accounts&quot;}
+HTTP response headers: {connection=[close], content-type=[application/json], date=[Sun, 09 Mar 2025 08:31:57 GMT], transfer-encoding=[chunked]}
+	at app//com.bank.api.ApiClient.handleResponse(ApiClient.java:1154)
+	at app//com.bank.api.ApiClient.execute(ApiClient.java:1067)
+	at app//com.bank.api.client.DefaultApi.addAccountWithHttpInfo(DefaultApi.java:184)
+	at app//com.bank.api.client.DefaultApi.addAccount(DefaultApi.java:163)
+	at app//com.bank.CreateTransactionTests.setUp(CreateTransactionTests.java:24)
+	at java.base@21.0.5/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base@21.0.5/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base@21.0.5/java.util.ArrayList.forEach(ArrayList.java:1596)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="createTransaction_InvalidType()"></a>
+<h3 class="failures">createTransaction_InvalidType()</h3>
+<span class="code">
+<pre>com.bank.api.ApiException: Message: 
+HTTP response code: 500
+HTTP response body: {&quot;timestamp&quot;:&quot;2025-03-09T08:31:51.844+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/accounts&quot;}
+HTTP response headers: {connection=[close], content-type=[application/json], date=[Sun, 09 Mar 2025 08:31:51 GMT], transfer-encoding=[chunked]}
+	at app//com.bank.api.ApiClient.handleResponse(ApiClient.java:1154)
+	at app//com.bank.api.ApiClient.execute(ApiClient.java:1067)
+	at app//com.bank.api.client.DefaultApi.addAccountWithHttpInfo(DefaultApi.java:184)
+	at app//com.bank.api.client.DefaultApi.addAccount(DefaultApi.java:163)
+	at app//com.bank.CreateTransactionTests.setUp(CreateTransactionTests.java:24)
+	at java.base@21.0.5/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base@21.0.5/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base@21.0.5/java.util.ArrayList.forEach(ArrayList.java:1596)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="createTransaction_TransferToSelfAccount()"></a>
+<h3 class="failures">createTransaction_TransferToSelfAccount()</h3>
+<span class="code">
+<pre>com.bank.api.ApiException: Message: 
+HTTP response code: 500
+HTTP response body: {&quot;timestamp&quot;:&quot;2025-03-09T08:31:45.827+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/accounts&quot;}
+HTTP response headers: {connection=[close], content-type=[application/json], date=[Sun, 09 Mar 2025 08:31:45 GMT], transfer-encoding=[chunked]}
+	at app//com.bank.api.ApiClient.handleResponse(ApiClient.java:1154)
+	at app//com.bank.api.ApiClient.execute(ApiClient.java:1067)
+	at app//com.bank.api.client.DefaultApi.addAccountWithHttpInfo(DefaultApi.java:184)
+	at app//com.bank.api.client.DefaultApi.addAccount(DefaultApi.java:163)
+	at app//com.bank.CreateTransactionTests.setUp(CreateTransactionTests.java:24)
+	at java.base@21.0.5/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base@21.0.5/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base@21.0.5/java.util.ArrayList.forEach(ArrayList.java:1596)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -75,34 +195,34 @@
 </tr>
 </thead>
 <tr>
-<td class="success">createTransaction_HappyCase()</td>
-<td class="success">1.831s</td>
-<td class="success">passed</td>
+<td class="failures">createTransaction_HappyCase()</td>
+<td class="failures">6.016s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">createTransaction_InSufficientBalance()</td>
-<td class="success">1.114s</td>
-<td class="success">passed</td>
+<td class="failures">createTransaction_InSufficientBalance()</td>
+<td class="failures">6.017s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">createTransaction_InvalidFromAccountId()</td>
-<td class="success">1.150s</td>
-<td class="success">passed</td>
+<td class="failures">createTransaction_InvalidFromAccountId()</td>
+<td class="failures">6.013s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">createTransaction_InvalidToAccountId()</td>
-<td class="success">1.390s</td>
-<td class="success">passed</td>
+<td class="failures">createTransaction_InvalidToAccountId()</td>
+<td class="failures">6.012s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">createTransaction_InvalidType()</td>
-<td class="success">0.686s</td>
-<td class="success">passed</td>
+<td class="failures">createTransaction_InvalidType()</td>
+<td class="failures">6.017s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">createTransaction_TransferToSelfAccount()</td>
-<td class="success">0.687s</td>
-<td class="success">passed</td>
+<td class="failures">createTransaction_TransferToSelfAccount()</td>
+<td class="failures">6.016s</td>
+<td class="failures">failed</td>
 </tr>
 </table>
 </div>
@@ -114,7 +234,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.12.1</a> at Mar 1, 2025, 8:59:24 p.m.</p>
+<a href="http://www.gradle.org">Gradle 8.12.1</a> at Mar 9, 2025, 4:32:03 p.m.</p>
 </div>
 </div>
 </body>
